@@ -38,5 +38,5 @@ A call must be made to the main module, passing it the arguments corresponding t
 ### Dataset
 
 the data used are little satellites images of 512*512 pixels from the Hautes Alpes french department 
-The data for "the synthese dataset" has been created from the same dataset.
+The data for "the synthese dataset" has been created from the same dataset with the help of script_generation notebook.
 
