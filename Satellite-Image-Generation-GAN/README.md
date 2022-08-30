@@ -31,7 +31,8 @@ python test.py --name AmpliGAN --batch_size 12 --dataroot Real/ --dataset_mode c
 
 D'autres paramètres sont réglables, ils sont détaillées dans le fichier config.py.
 <br>
-Nous avons mis quelques exemple d'images générées par le réseau. 
+<br>
+Nous avons mis quelques exemple d'images générées par le réseau sur notre jeu de données dans le dossier best. 
 
 ## License
 
