@@ -95,13 +95,13 @@ import mmcv
 print(mmcv.__version__)
 ```
 
-![output](output.png)
+![output](Satellite-Image-Segmentation-torch/output.png)
 
 6. Pour toutes infos complémentaires sur comment mettre en place les modèles voir le lien [suivant](https://github.com/open-mmlab/mmsegmentation/tree/master/docs/en/tutorials)
 
 
 ## Partie 3 : Génération d'images satellite par le réseau GAN OASIS
-
+Nous utilisons dans cette partie le réseau [GAN Oasis](https://arxiv.org/pdf/2012.04781.pdf) 
 
 ### Setup
 cloner le repository suivant:
@@ -125,16 +125,16 @@ python train.py --name AmpliGAN --batch_size 12 --dataroot Real/ --dataset_mode 
 ```
 
 ### Test du modèle
+La commande suivante va générer des images en sortie à partir d'un jeu de label, ainsi qu'une série de métriques comme le score FID pour l'évaluation du GAN.
 ```
-python test.py --name AmpliGAN --batch_size 12 --dataroot Real/ --dataset_mode custom --num_workers 4
+python test.py --name AmpliGAN --batch_size 12 --dataroot path_to_dataset/ --dataset_mode custom --num_workers 4
 ```
 
-#### Autres informations
+### Exemples d'images générées en sortie
 
-D'autres paramètres sont réglables, ils sont détaillées dans le fichier config.py.
-<br>
-<br>
-Nous avons mis quelques exemple d'images générées par le réseau sur notre jeu de données dans le dossier best. 
+![img_52](Satellite-Image-Generation-GAN/best/image/img_52.png)
+![img_36.png](Satellite-Image-Generation-GAN/best/image/img_36.png)
+
 
 #### License
 
@@ -145,4 +145,7 @@ For a list of other open source components included in this project, see the
 file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 
  nor monitored in any way.
+ 
+### Autres informations
 
+Pour de plus amples informations je vous invite à lire le rapport donné en [pdf](https://github.com/hugomtr/Satellite-Image-Segmentation/blob/master/Stage_Rapport__Version_792__1_%20(2)-compress%C3%A9.pdf)
